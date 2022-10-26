@@ -35,6 +35,7 @@ public class OnetoManyController {
 
 	@GetMapping(value = "/getBookDetails")
 	public ResponseEntity<List<Library>> getLibrary() {
+		log.info("retrived successfully");
 		return new ResponseEntity<List<Library>>(onetoManyService.getLibrary(),HttpStatus.CREATED);
 	}
 
